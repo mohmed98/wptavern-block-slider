@@ -1,12 +1,37 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+/* Basic styling for the slider */
 
-.wp-block-wpc-wptavern-block-slider {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
-}
+.slider-container {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	max-width: 600px; /* Adjust as needed */
+	margin: 0 auto;
+	position: relative;
+  }
+  
+  .slider-item {
+	display: none;
+	flex: 0 0 100%;
+	transition: opacity 0.5s;
+  }
+  
+  /* Add this rule to style the active slide */
+
+  .slider-item.active {
+	display: block;
+  }
+  
+  
+  .slider-navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+  }
+  
+  .slider-next,
+  .slider-prev {
+	cursor: pointer;
+  }
+  
+  /* You can add more styles for the navigation arrows as needed */
+  
